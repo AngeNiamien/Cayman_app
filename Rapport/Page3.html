@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            text-decoration: underline;
+            text-align: center;
+        }
+        .abstract-header, .intro-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            /* border: 1px solid #ccc; */
+            /* border-bottom: none; */
+            /* margin-bottom: 0; */
+        }
+        .abstract-content, .intro-content {
+            /* border: 1px solid #ccc; */
+            /* border-top: none; */
+            padding: 10px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        @media print {
+            .footer {
+                display: none;
+            }
+            .page-number {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro-header">
+            0 Introduction
+        </div>
+        <div class="intro-content">
+            <p>L’autorité bancaire européenne a publié le 28/09/2016 ses orientations relatives à la nouvelle définition du (dénommée ci-après « UTP »), l’application de la définition aux données externes et les critères de retour à un statut de non-défaut.</p>
+            <p>Parallèlement, des normes techniques de réglementation précisant les différents seuils de matérialité applicable aux impayés sur les obligations de crédits ont été publiées, l’objectif étant d’harmoniser la définition du défaut parmi les institutions financières européennes et d’améliorer leur comparabilité.</p>
+            <p>Plus précisément, cette nouvelle définition du défaut détaille dorénavant :</p>
+            <ul>
+                <li>Les seuils de matérialité cumulatifs pour l’identification des impayés :
+                    <ul>
+                        <li>Une durée d’impayés de plus de 90 jours,</li>
+                        <li>Un montant de 500 euros ET un rapport entre la somme des impayés et le total des expositions de la contrepartie concernée supérieur à 1%.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Pour qu’un défaut soit constaté, il donc faut que les 2 seuils de 500€ et de 1% des EAD aient été dépassés pendant 90 jours consécutifs.</p>
+            <p>La notion de contrepartie de type « Unlikely To Pay ». Il s’agit ici de contrepartie que la banque estime ne pas être en mesure de s’acquitter de ses obligations.</p>
+            <p>La modélisation s’articule autour de 7 principales étapes :
+                <ol>
+                    <li>L’extraction des données et la définition du périmètre de modélisation,</li>
+                    <li>La détection et le traitement des valeurs aberrantes ainsi que la mise en place des règles de gestion,</li>
+                    <li>La transformation des ratios bruts,</li>
+                    <li>L’analyse univariée,</li>
+                    <li>L’estimation de la fonction de score,</li>
+                    <li>La segmentation et le calibrage.</li>
+                    <li>La validation des performances du modèle.</li>
+                </ol>
+            </p>
+        </div>
+        <div class="page-number">
+            Page 3
+        </div>
+    </div>
+    <!-- <div class="footer" id="footer">
+        Page 3
+    </div> -->
+</body>
+</html>

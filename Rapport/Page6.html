@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px; /* Ajustez la taille selon vos besoins */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2, .section h3, .section h4 {
+            text-decoration: underline;
+            text-align: left;
+        }
+        .section-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+        .section-content {
+            padding: 10px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f0f7;
+        }
+        @media print {
+            .footer {
+                display: none;
+            }
+            .page-number {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="path_to_your_logo.png" alt="Logo" class="logo"> -->
+    <div class="container">
+        <div class="section-header">
+            6 Fonction de score
+        </div>
+        <div class="section-content">
+            <p>Cette section présente l’analyse combinatoire des variables retenues, découlant ainsi sur la fonction de score probabilité d’être sain l’année suivante.</p>
+            <p>La méthode retenue pour la modélisation de l’événement défaut versus non défaut est la régression logistique. Le lecteur pourra se référer au précédent document de modélisation pour tout complément d’information sur cette méthode (5).</p>
+
+            <h3>6.1 Méthodologie</h3>
+            <p>Plusieurs méthodes peuvent être utilisées pour la sélection de la fonction de score, qu’elles soient statistiques ou expertes (c’est-à-dire basées principalement sur des études réalisées par les analystes des métiers de la banque).</p>
+
+            <h3>6.2 Résultats</h3>
+            <p>Cette section présente la meilleure fonction de score (le meilleur modèle).</p>
+
+            <h3>6.3 Analyse de colinéarité</h3>
+            <p>L’analyse de colinéarité consiste à évaluer les potentielles liaisons linéaires existantes entre les variables explicatives du modèle retenu. Étant donné que l’étude des corrélations a déjà été effectuée dans la section 5.2, cette section se concentre uniquement sur la multicollinéarité.</p>
+            <p>L’indicateur utilisé ici est le facteur d’inflation de la variance (dénommé ci-après VIF). Cet indicateur quantifie question vis-à-vis des autres variables du modèle.</p>
+            <p>Le VIF, associé à la variable explicative \(X_k\), peut être formulé comme ceci :</p>
+            <p>Soit \(R_k^2\) le coefficient de détermination issu de la régression des moindres carrées de la variable \(X_k\) par les autres variables explicatives du modèle.</p>
+            <p>
+                \[
+                VIF_{β_k} = \frac{1}{1 - R_k^2}
+                \]
+            </p>
+            <p>Il est convenu que si la valeur du VIF dépasse le seuil de 2,5 la colinéarité est jugée forte.</p>
+            <p>Le tableau ci-après présente les résultats.</p>
+
+            <h3>6.4 Analyse des propriétés du score</h3>
+            <p>La fonction de score modélise la probabilité d’être sain l’année suivante pour chaque contrepartie.</p>
+        </div>
+
+        <div class="page-number">
+            Page 6
+        </div>
+    </div>
+</body>
+</html>

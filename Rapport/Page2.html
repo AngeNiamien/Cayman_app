@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            text-decoration: underline;
+            text-align: center;
+        }
+        .abstract-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .abstract-content {
+            border: 1px solid #ccc;
+            border-top: none;
+            padding: 10px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .toc-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            /* border: 1px solid #ccc; */
+            /* border-bottom: none; */
+            /* margin-bottom: 0; */
+        }
+        .toc-content {
+            /* border: 1px solid #ccc;
+            border-top: none; */
+            padding: 10px;
+        }
+        .toc-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc-content li {
+            margin-bottom: 5px;
+        }
+        .toc-content li::after {
+            content: ".........................................................................................";
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .toc-content li span {
+            float: right;
+        }
+        @media print {
+            .footer {
+                position: fixed;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toc-header">
+            Tables des matières
+        </div>
+        <div class="toc-content">
+            <ul>
+                <li><span>1</span>Abstract</li>
+                <li><span>1</span>Introduction</li>
+                <li><span>4</span>Processus de collecte des données</li>
+                <li><span>5</span>Le cadre méthodologique</li>
+                <li><span>5</span>2.1 Périmètre de modélisation</li>
+                <li><span>5</span>2.2 Description de la méthodologie de modélisation</li>
+                <li><span>5</span>Description de la base de développement du modèle</li>
+                <li><span>5</span>3.1 Description du portefeuille</li>
+                <li><span>5</span>Pré-traitements des données</li>
+                <li><span>5</span>4.1 Traitement des valeurs extrêmes</li>
+                <li><span>5</span>4.2 Traitement des valeurs indéterminées et règles de gestion</li>
+                <li><span>5</span>4.3 Transformation des variables</li>
+                <li><span>5</span>4.3.1 La discrétisation des variables quantitatives</li>
+                <li><span>5</span>4.3.2 Regroupement de modalités des variables qualitatives</li>
+                <li><span>6</span>Analyse univariée</li>
+                <li><span>6</span>5.1 Le pouvoir discriminant</li>
+                <li><span>6</span>5.2 Les niveaux de corrélation</li>
+                <li><span>6</span>Fonction de score</li>
+                <li><span>6</span>6.1 Méthodologie</li>
+                <li><span>6</span>6.2 Résultats</li>
+                <li><span>6</span>6.3 Analyse de colinéarité</li>
+                <li><span>7</span>6.4 Analyse des propriétés du score</li>
+                <li><span>7</span>Segmentation</li>
+                <li><span>7</span>7.1 Méthodologie</li>
+                <li><span>7</span>7.2 Résultats</li>
+                <li><span>7</span>Calibrage</li>
+                <li><span>7</span>8.1 Méthodologie</li>
+                <li><span>8</span>8.2 Résultats</li>
+                <li><span>8</span>Synthèse du modèle final</li>
+                <li><span>8</span>Annexes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
