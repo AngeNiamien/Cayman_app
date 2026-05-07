@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px; /* Ajustez la taille selon vos besoins */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2, .section h3, .section h4 {
+            text-decoration: underline;
+            text-align: left;
+        }
+        .section-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+        .section-content {
+            padding: 10px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f0f7;
+        }
+        @media print {
+            .footer {
+                display: none;
+            }
+            .page-number {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="path_to_your_logo.png" alt="Logo" class="logo"> -->
+        <div class="section-header">
+            5 Analyse univariée
+        </div>
+        <div class="section-content">
+            <h3>5.1 Le pouvoir discriminant</h3>
+            <p>Le pouvoir discriminant d’une variable réside dans sa faculté à différencier deux populations distinctes. Il est intéressant de mesurer le pouvoir discriminant d’une variable isolée vis-à-vis de la cible désirée. C’est dans ce cadre que s’inscrit l’indice de Gini.</p>
+            <p>L’indice de Gini permet de quantifier la répartition d’une variable au sein de deux populations. Le coefficient varie de 0, discrimination nulle, à 1, discrimination parfaite. Ici, l’intérêt d’observer à quel point une variable candidate discrimine la population saine de la population en défaut.</p>
+
+            <h3>5.2 Les niveaux de corrélation</h3>
+            <p>L’analyse des niveaux de corrélation, de liaisons ou d’associations entre les variables explicatives est une étape clé dans le processus de modélisation de la probabilité de défaut. En effet, il est important de vérifier que les liaisons ou associations entre les variables retenues ne perturbent pas l’analyse multivariée. Une forte liaison entre deux variables explicatives peut refléter une information commune. La volonté derrière cette analyse de corrélation est de conserver l’information la plus variée sans pour autant cumuler la même information. Ainsi, les niveaux d’interaction entre les variables issues de l’étape précédente sont analysés afin de n’obtenir qu’un ensemble de variables sans redondance d’information.</p>
+            <p>L’analyse de corrélation recherche donc pour toute paire de variables, les potentielles relations qu’elles soient linéaires, non linéaires, négatives ou positives. Il s’agit également de quantifier ces relations et juger de leur pertinence économique.</p>
+            <p>Comme précisé précédemment, plusieurs natures de variables sont présentes dans ce jeu de variables final : les variables peuvent être continues, catégorielles ou binaires. Selon la nature de la variable, l’analyse du niveau de corrélation est différente. En effet, certains indicateurs statistiques permettent uniquement de quantifier la relation linéaire entre deux variables continues, d’autres se concentrent sur les interactions entre deux variables binaires, et certains traitent de la relation entre une variable continue et catégorielle.</p>
+            <p>Dans ce document deux types de corrélations seront utilisées :</p>
+            <ul>
+                <li>La corrélation linéaire de Pearson</li>
+                <li>La corrélation des rangs de Spearman</li>
+            </ul>
+        </div>
+
+        <div class="page-number">
+            Page 6
+        </div>
+    </div>
+</body>
+</html>

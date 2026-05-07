@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px; /* Ajustez la taille selon vos besoins */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2, .section h3 {
+            text-decoration: underline;
+            text-align: left;
+        }
+        .section-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+        .section-content {
+            padding: 10px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f0f7;
+        }
+        @media print {
+            .footer {
+                display: none;
+            }
+            .page-number {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-header">
+            1 Processus de collecte des données
+        </div>
+        <div class="section-content">
+            <p>Cette section vise à expliciter le processus de collecte des données de modélisation.</p>
+        </div>
+
+        <div class="section-header">
+            2 Le cadre méthodologique
+        </div>
+        <div class="section-content">
+            <h3>2.1 Périmètre de modélisation</h3>
+            <p>Le modèle est développé sur {{ nbrobservations }}</p>
+            <p>Les résultats présentés dans les sections suivantes sont issus de la base de modélisation finale.</p>
+
+            <h3>2.2 Description de la méthodologie de modélisation</h3>
+            <p>La méthodologie de modélisation peut être définie en 4 étapes.</p>
+            <p>Dans la 1ère étape, une base de modélisation est créée reflétant le croisement des variables explicatives, l’information du défaut et la valeur de l’exposition sur la période donnée. À l’aide des analystes du risque de crédit, le jeu de variables candidates et des règles de gestions associées à chaque variable sont ensuite définis. La détection et la correction des valeurs aberrantes s’effectuent via l’utilisation des percentiles de la distribution associée à chaque variable.</p>
+            <p>La 2ème étape se concentre sur l’analyse univariée. Les distributions et le pouvoir discriminant sont analysés.</p>
+            <p>Cette étape intermédiaire voit l’analyse multivariée se réaliser à l’aide de la régression logistique binaire, la méthode la plus couramment utilisée lors de la prédiction d’une variable dichotomique. Différentes fonctions de score sont ensuite retenues et présentées. Celle qui présente le plus haut niveau de stabilité, de lisibilité vis-à-vis de l’attente des analystes du risque de crédit et de précision est retenue. De potentielles transformations telles que la discrétisation des ratios retenus sont ensuite appliquées afin d’améliorer la lisibilité ou l’interprétabilité du modèle.</p>
+            <p>Enfin, un échantillon out of sample/out of time correspondant à XXX périmètre d’évaluer dans un 1er temps les performances du modèle. Dans un 2nd temps, Un autre échantillon out of sample/out of time représentant les données du portefeuille au XX/XX/XX permettra de valider le modèle.</p>
+        </div>
+
+        <div class="section-header">
+            3 Description de la base de développement du modèle
+        </div>
+        <div class="section-content">
+            <h3>3.1 Description du portefeuille</h3>
+            <p>Les tableaux ci-après présentent le volume et la distribution des contreparties clientes entre 20XX et 20XX.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Année</th>
+                        <th>Volume</th>
+                        <th>Distribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20XX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                    <tr>
+                        <td>20XX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Les tableaux ci-après présentent le volume d’encours et la distribution des contreparties entre 20XX et 20XX.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Année</th>
+                        <th>Encours</th>
+                        <th>Distribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20XX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                    <tr>
+                        <td>20XX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-header">
+            4 Pré-traitements des données
+        </div>
+        <div class="section-content">
+            <h3>4.1 Traitement des valeurs extrêmes</h3>
+            <p>Les valeurs aberrantes ou valeurs extrêmes sont définies comme des observations significativement différentes du comportement moyen constaté sur une population donnée.</p>
+
+            <h3>4.2 Traitement des valeurs indéterminées et règles de gestion</h3>
+            <p>Cette section se concentre d’une part sur le volume de valeurs non calculables présentes au sein de la base de modélisation et d’autre part, sur les règles de gestion devant être appliquées à certaines valeurs non calculables ou parfois renseignées.</p>
+
+            <h3>4.3 Transformation des variables</h3>
+            <p>Cette section décrit les transformations appliquées aux variables pour améliorer la modélisation.</p>
+
+            <h4>4.3.1 La discrétisation des variables quantitatives</h4>
+            <p>La discrétisation des variables quantitatives permet de convertir des variables continues en variables catégorielles. Cela peut améliorer la performance du modèle en réduisant la complexité et en rendant les variables plus interprétables.</p>
+
+            <h4>4.3.2 Regroupement de modalités des variables quali</h4>
+            <p>Le regroupement de modalités des variables qualitatives consiste à fusionner certaines catégories de variables qualitatives pour réduire le nombre de modalités et améliorer la stabilité du modèle.</p>
+        </div>
+
+        <div class="page-number">
+            Page 4
+        </div>
+    </div>
+</body>
+</html>

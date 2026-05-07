@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Développement de Modèle de PD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            padding-bottom: 60px; /* Espace pour le pied de page */
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px; /* Ajustez la taille selon vos besoins */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2, .section h3, .section h4 {
+            text-decoration: underline;
+            text-align: left;
+        }
+        .section-header {
+            background-color: #f9f0f7;
+            padding: 5px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+        .section-content {
+            padding: 10px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Couleur de fond du pied de page */
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f0f7;
+        }
+        .results {
+            background-color: #f0f0f0; /* Fond légèrement plus foncé pour les sections Résultats */
+            padding: 10px;
+        }
+        @media print {
+            .footer {
+                display: none;
+            }
+            .page-number {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="path_to_your_logo.png" alt="Logo" class="logo"> -->
+    <div class="container">
+        <div class="section-header">
+            9 Synthèse du modèle final
+        </div>
+        <div class="section-content">
+            <p>Cette section rappelle et résume simplement les principaux éléments concernant la fonction de score, la segmentation et la calibration entreprise.</p>
+            <p>Le tableau ci-après rappelle la fonction de score ainsi que le sens économique, le maximum et le minimum de chaque variable.</p>
+
+            <!-- Tableau -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Sens Économique</th>
+                        <th>Minimum</th>
+                        <th>Maximum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Variable 1</td>
+                        <td>Positif</td>
+                        <td>0</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Variable 2</td>
+                        <td>Négatif</td>
+                        <td>-50</td>
+                        <td>50</td>
+                    </tr>
+                    <!-- Ajoutez plus de lignes selon vos besoins -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-header">
+            10 Annexes
+        </div>
+        <div class="section-content">
+            <p>Cette section contient les annexes du rapport.</p>
+        </div>
+
+        <div class="page-number">
+            Page 8
+        </div>
+    </div>
+</body>
+</html>
